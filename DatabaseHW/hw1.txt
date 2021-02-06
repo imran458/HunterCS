@@ -1,0 +1,284 @@
+Imran Sabur
+CSCI 435 HW1
+
+R Portion
+
+> stats<-rbind(SD<-apply(swiss,2,sd),
++ tot<-apply(swiss,2,sum))
+> stats<-rbind(stats,
++ avg<-apply(swiss,2,mean),
++ mx<-apply(swiss,2,max),
++ mn<-apply(swiss,2,min))
+> rownames(stats)<-c("SD","tot","avg","mx","mn")
+>
+> stats
+     Fertility Agriculture Examination  Education   Catholic Infant.Mortality
+SD    12.49170    22.71122    7.977883   9.615407   41.70485         2.912697
+tot 3296.70000  2381.00000  775.000000 516.000000 1933.76000       937.300000
+avg   70.14255    50.65957   16.489362  10.978723   41.14383        19.942553
+mx    92.50000    89.70000   37.000000  53.000000  100.00000        26.600000
+mn    35.00000     1.20000    3.000000   1.000000    2.15000        10.800000
+>
+
+SQL
+
+SUM
+
+mysql> select sum(fertility) from homework;
++--------------------+
+| sum(fertility)     |
++--------------------+
+| 3296.7000000000003 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(agriculture) from homework;
++-------------------+
+| sum(agriculture)  |
++-------------------+
+| 2380.999999999999 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(examination) from homework;
++------------------+
+| sum(examination) |
++------------------+
+|              775 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(education) from homework;
++----------------+
+| sum(education) |
++----------------+
+|            516 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(catholic) from homework;
++---------------+
+| sum(catholic) |
++---------------+
+|       1933.76 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(infant_mortality) from homework;
++-----------------------+
+| sum(infant_mortality) |
++-----------------------+
+|     937.2999999999996 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+STANDARD DEVIATION
+
+select stddev(agriculture) from homework;
++---------------------+
+| stddev(agriculture) |
++---------------------+
+|  22.468310161671045 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select stddev(fertility) from homework;
++-------------------+
+| stddev(fertility) |
++-------------------+
+| 12.35809226964433 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select stddev(examination) from homework;
++---------------------+
+| stddev(examination) |
++---------------------+
+|   7.892555987644798 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select stddev(education) from homework;
++-------------------+
+| stddev(education) |
++-------------------+
+|  9.51256584779318 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select stddev(catholic) from homework;
++-------------------+
+| stddev(catholic)  |
++-------------------+
+| 41.25879627957065 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select stddev(infant_mortality) from homework;
++--------------------------+
+| stddev(infant_mortality) |
++--------------------------+
+|       2.8815439626826436 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+MEAN
+
+select avg(fertility) from homework;
++-------------------+
+| avg(fertility)    |
++-------------------+
+| 70.14255319148937 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(agriculture) from homework;
++-------------------+
+| avg(agriculture)  |
++-------------------+
+| 50.65957446808509 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(examination) from homework;
++------------------+
+| avg(examination) |
++------------------+
+|          16.4894 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(education) from homework;
++----------------+
+| avg(education) |
++----------------+
+|        10.9787 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(catholic) from homework;
++-------------------+
+| avg(catholic)     |
++-------------------+
+| 41.14382978723404 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(infant_mortality) from homework;
++-----------------------+
+| avg(infant_mortality) |
++-----------------------+
+|    19.942553191489353 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+MAX
+
+select max(fertility) from homework;
++----------------+
+| max(fertility) |
++----------------+
+|           92.5 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select max(agriculture) from homework;
++------------------+
+| max(agriculture) |
++------------------+
+|             89.7 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select max(examination) from homework;
++------------------+
+| max(examination) |
++------------------+
+|               37 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select max(education) from homework;
++----------------+
+| max(education) |
++----------------+
+|             53 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select max(catholic) from homework;
++---------------+
+| max(catholic) |
++---------------+
+|           100 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select max(infant_mortality) from homework;
++-----------------------+
+| max(infant_mortality) |
++-----------------------+
+|                  26.6 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+MINIMUM
+
+select min(fertility) from homework;
++----------------+
+| min(fertility) |
++----------------+
+|             35 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select min(agriculture) from homework;
++------------------+
+| min(agriculture) |
++------------------+
+|              1.2 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select min(examination) from homework;
++------------------+
+| min(examination) |
++------------------+
+|                3 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select min(education) from homework;
++----------------+
+| min(education) |
++----------------+
+|              1 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select min(catholic) from homework;
++---------------+
+| min(catholic) |
++---------------+
+|          2.15 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> select min(infant_mortality) from homework;
++-----------------------+
+| min(infant_mortality) |
++-----------------------+
+|                  10.8 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql>

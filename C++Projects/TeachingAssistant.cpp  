@@ -1,0 +1,42 @@
+/*
+Imran Sabur
+CSCI 235
+Project 1B
+Professor Ligorio
+
+
+This is the implementation of the teaching assistant class.
+
+*/
+
+#include "TeachingAssistant.hpp"
+#include "Student.hpp"
+#include <iostream>
+using namespace std; 
+
+TeachingAssistant::TeachingAssistant(int id, string first, string last):Student(id,first,last)
+{
+    hours_per_week_ = 0;
+    ta_role_
+
+}
+
+void TeachingAssistant::setRole(const ta_role role)
+{
+    role_ = role; 
+}
+
+void TeachingAssistant::setHours(const int hours)
+{
+    hours_per_week_ = hours; 
+}
+
+int TeachingAssistant::getHours()
+{
+    return hours_per_week_;
+}
+
+ta_role TeachingAssistant::getRole()
+{
+    return role; 
+}

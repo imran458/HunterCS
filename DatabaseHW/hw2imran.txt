@@ -1,0 +1,38 @@
+Imran Sabur
+HW 2
+Physician Database
+
+CREATE TABLE Patient (
+  patient_id INT PRIMARY KEY NOT NULL,
+  patient_first varchar(32),
+  patient_last varchar(32),
+  age int,
+  DOB datetime,
+  visit_date datetime,
+  city varchar(32),
+  state varchar(32),
+  zipcode varchar(5),
+  insurance_id,
+  physician_id,
+  sickness_id
+);
+
+CREATE TABLE Insurance(
+    insurance_id int PRIMARY key not NULL,
+    insurance_name varchar(32),
+    patient_id int not null,
+    copay int,
+    physician_amount_due int
+); 
+
+CREATE TABLE SICKNESS(
+    sickness_id int primary key not null,
+    sickness varchar(32),
+    physician_id int not null
+);
+
+CREATE TABLE Physician(
+    physician_id int primary key not null,
+    physician_name varchar(32),
+    specialty varchar(32)
+);
